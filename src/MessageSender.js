@@ -13,7 +13,7 @@ import "firebase/storage";
 import { db } from "./firebase";
 
 function MessangerSender() {
-  const [{ user }, dispatch] = useStateValue();
+  const [{ user }, dispatch] = useStateValue(); // eslint-disable-line no-unused-vars
   const [input, setInput] = useState("");
   const [imageUrl, setImageUrl] = useState("");
 

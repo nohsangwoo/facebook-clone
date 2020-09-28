@@ -8,7 +8,7 @@ import Login from "./Login";
 import { useStateValue } from "./StateProvider";
 
 function App() {
-  const [{ user }, dispatch] = useStateValue();
+  const [{ user }, dispatch] = useStateValue(); // eslint-disable-line no-unused-vars
   return (
     // BEM naming convention
     <div className="App">

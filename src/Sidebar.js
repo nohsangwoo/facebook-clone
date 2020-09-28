@@ -11,7 +11,7 @@ import { ExpandMoreOutlined } from "@material-ui/icons";
 import { useStateValue } from "./StateProvider";
 
 function Sidebar() {
-  const [{ user }, dispatch] = useStateValue();
+  const [{ user }, dispatch] = useStateValue(); // eslint-disable-line no-unused-vars
   return (
     <div className="sidebar">
       <SidebarRow src={user.photoURL} title={user.displayName} />
