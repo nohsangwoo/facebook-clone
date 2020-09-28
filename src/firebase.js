@@ -1,6 +1,8 @@
-import { Dvr, FilterCenterFocusOutlined } from "@material-ui/icons";
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-import firebase from "firebase";
+import * as firebase from "firebase/app";
+import "firebase/auth";
+import "firebase/firestore";
+import "firebase/storage";
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_API_KEY,
@@ -13,10 +15,24 @@ const firebaseConfig = {
   measurementId: process.env.REACT_APP_APP_MEASUREMENT_ID,
 };
 
-firebase.initializeApp(firebaseConfig);
-const db = firebase.firestore;
-const auth = firebase.auth();
-const provider = new firebase.auth.GoogleAuthProvider();
+// firebase.initializeApp(firebaseConfig);
+// const db = firebase.firestore;
+// const auth = firebase.auth();
+export const provider = new firebase.auth.GoogleAuthProvider();
 
-export { auth, provider };
-export default db;
+// export { auth, provider };
+// export default db;
+
+firebase.initializeApp(firebaseConfig);
+
+// firebase최상위
+export const firebaseInstance = firebase;
+
+// 인증관리
+export const auth = firebase.auth();
+
+// db  컨트롤
+export const db = firebase.firestore();
+
+// 파일 업로드 컨트롤
+export const storageService = firebase.storage();
