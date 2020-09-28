@@ -6,13 +6,28 @@ import PhotoLibraryIcon from "@material-ui/icons/PhotoLibrary";
 import InsertEmoticonIcon from "@material-ui/icons/InsertEmoticon";
 import { useStateValue } from "./StateProvider";
 
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+import * as firebase from "firebase/app";
+import "firebase/firestore";
+import "firebase/storage";
+import { db } from "./firebase";
+
 function MessangerSender() {
   const [{ user }, dispatch] = useStateValue();
   const [input, setInput] = useState("");
   const [imageUrl, setImageUrl] = useState("");
 
-  const handleSubmit = (e) => {
-    e.prevenDefault();
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    // firebase의 posts 부분에서 데이터 추가
+    db.collection("posts").add({
+      message: input,
+      timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+      profilePic: user.photoURL,
+      username: user.displayName,
+      image: imageUrl,
+    });
 
     // some clever db stuff
     setInput("");
@@ -22,7 +37,7 @@ function MessangerSender() {
     <div className="messageSender">
       <div className="messageSender__top">
         <Avatar src={user.photoURL} />
-        <form action="">
+        <form action="" onSubmit={handleSubmit}>
           <input
             value={input}
             onChange={(e) => setInput(e.target.value)}
@@ -34,9 +49,7 @@ function MessangerSender() {
             value={imageUrl}
             onChange={(e) => setImageUrl(e.target.value)}
           />
-          <button onClick={handleSubmit} type="submit">
-            Hidden submit
-          </button>
+          <button type="submit">Hidden submit</button>
         </form>
       </div>
       <div className="messageSender__bottom">
