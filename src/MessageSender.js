@@ -10,7 +10,7 @@ import { useStateValue } from "./StateProvider";
 import * as firebase from "firebase/app";
 import "firebase/firestore";
 import "firebase/storage";
-import { db } from "./firebase";
+import db from "./firebase";
 
 function MessangerSender() {
   const [{ user }, dispatch] = useStateValue(); // eslint-disable-line no-unused-vars

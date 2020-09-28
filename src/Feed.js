@@ -3,7 +3,7 @@ import StoryReel from "./StoryReel";
 import "./Feed.css";
 import MessageSender from "./MessageSender";
 import Post from "./Post";
-import { db } from "./firebase";
+import db from "./firebase";
 
 // firebase db에서 data값 가져오는방법
 function Feed() {

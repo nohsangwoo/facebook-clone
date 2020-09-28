@@ -18,21 +18,21 @@ const firebaseConfig = {
 // firebase.initializeApp(firebaseConfig);
 // const db = firebase.firestore;
 // const auth = firebase.auth();
-export const provider = new firebase.auth.GoogleAuthProvider();
+const provider = new firebase.auth.GoogleAuthProvider();
 
-// export { auth, provider };
-// export default db;
-
-firebase.initializeApp(firebaseConfig);
-
-// firebase최상위
 export const firebaseInstance = firebase;
 
+firebase.initializeApp(firebaseConfig);
+// firebase최상위
+
 // 인증관리
-export const auth = firebase.auth();
+const auth = firebase.auth();
 
 // db  컨트롤
-export const db = firebase.firestore();
+const db = firebase.firestore();
 
 // 파일 업로드 컨트롤
 export const storageService = firebase.storage();
+
+export { auth, provider };
+export default db;
