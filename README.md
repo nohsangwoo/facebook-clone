@@ -14,4 +14,5 @@
 
 # React flip move
 
-3:31:20
+Project Console: https://console.firebase.google.com/project/facebook-clone-250c3/overview
+Hosting URL: https://facebook-clone-250c3.web.app
