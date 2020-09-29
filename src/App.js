@@ -1,13 +1,14 @@
 import React from "react";
-import "./App.css";
 import Feed from "./Feed";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
 import Widgets from "./Widgets";
-// import Login from "./Login";
-
+import "./App.css";
 import { useStateValue } from "./StateProvider";
-import LoginT from "./LoginT";
+// import LoginT from "./LoginT";
+import fbLogo from "./images/fb-logo.webp";
+import fbWord from "./images/fb-word.svg";
+// import Login from "./Login";
 
 function App() {
   const [{ user }, dispatch] = useStateValue(); // eslint-disable-line no-unused-vars
@@ -17,9 +18,13 @@ function App() {
     <div className="App">
       {!user ? (
         <>
+          <div className="login__logo">
+            <img src={fbLogo} alt="fbLogo" />
+            <img src={fbWord} alt="fbWord" />
+          </div>
           {/* <h1>Login page this</h1> */}
           {/* <Login /> */}
-          <LoginT />
+          {/* <LoginT /> */}
         </>
       ) : (
         <>
