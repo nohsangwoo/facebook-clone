@@ -22,15 +22,18 @@ function Login() {
       .catch((error) => alert(error.message));
   };
   return (
-    <div className="login">
-      <div className="login__logo">
-        <img src={fbLogo} alt="fbLogo" />
-        <img src={fbWord} alt="fbWord" />
+    <>
+      test for main
+      <div className="login">
+        <div className="login__logo">
+          <img src={fbLogo} alt="fbLogo" />
+          <img src={fbWord} alt="fbWord" />
+        </div>
+        <Button type="submit" onClick={signIn}>
+          Sign in
+        </Button>
       </div>
-      <Button type="submit" onClick={signIn}>
-        Sign in
-      </Button>
-    </div>
+    </>
   );
 }
 
