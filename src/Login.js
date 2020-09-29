@@ -4,6 +4,8 @@ import Button from "@material-ui/core/Button";
 import { auth, provider } from "./firebase";
 import { useStateValue } from "./StateProvider";
 import { actionTypes } from "./reducer";
+import fbLogo from "./images/fb-logo.webp";
+import fbWord from "./images/fb-word.svg";
 
 function Login() {
   const [state, dispatch] = useStateValue(); // eslint-disable-line no-unused-vars
@@ -22,14 +24,8 @@ function Login() {
   return (
     <div className="login">
       <div className="login__logo">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/1200px-Facebook_f_logo_%282019%29.svg.png"
-          alt=""
-        />
-        <img
-          src="https://www.logo.wine/a/logo/Facebook/Facebook-Logo.wine.svg"
-          alt=""
-        />
+        <img src={fbLogo} alt="fbLogo" />
+        <img src={fbWord} alt="fbWord" />
       </div>
       <Button type="submit" onClick={signIn}>
         Sign in
