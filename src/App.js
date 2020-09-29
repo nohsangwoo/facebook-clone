@@ -5,7 +5,9 @@ import Header from "./Header";
 import Sidebar from "./Sidebar";
 import Widgets from "./Widgets";
 import Login from "./Login";
+
 import { useStateValue } from "./StateProvider";
+import LoginT from "./LoginT";
 
 function App() {
   const [{ user }, dispatch] = useStateValue(); // eslint-disable-line no-unused-vars
@@ -17,6 +19,7 @@ function App() {
         <>
           {/* <h1>Login page this</h1> */}
           <Login />
+          <LoginT />
         </>
       ) : (
         <>
