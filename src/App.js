@@ -15,11 +15,6 @@ function App() {
       <div>main</div>
       {!user ? (
         <>
-          test for body
-          <div>test for div</div>
-          <div className="login__logo">
-            <div>class</div>
-          </div>
           <Login />
         </>
       ) : (
