@@ -23,7 +23,6 @@ function Login() {
   };
   return (
     <>
-      test for main
       <div className="login">
         <div className="login__logo">
           <img src={fbLogo} alt="fbLogo" />
