@@ -15,24 +15,16 @@ const firebaseConfig = {
   measurementId: process.env.REACT_APP_APP_MEASUREMENT_ID,
 };
 
-// firebase.initializeApp(firebaseConfig);
-// const db = firebase.firestore;
-// const auth = firebase.auth();
 const provider = new firebase.auth.GoogleAuthProvider();
 
 export const firebaseInstance = firebase;
 
 firebase.initializeApp(firebaseConfig);
-// firebase최상위
 
-// 인증관리
 const auth = firebase.auth();
 
-// db  컨트롤
 const db = firebase.firestore();
 
-// 파일 업로드 컨트롤
 export const storageService = firebase.storage();
-
 export { auth, provider };
 export default db;

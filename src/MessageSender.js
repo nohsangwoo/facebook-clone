@@ -6,7 +6,6 @@ import PhotoLibraryIcon from "@material-ui/icons/PhotoLibrary";
 import InsertEmoticonIcon from "@material-ui/icons/InsertEmoticon";
 import { useStateValue } from "./StateProvider";
 
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 import * as firebase from "firebase/app";
 import "firebase/firestore";
 import "firebase/storage";
@@ -20,7 +19,6 @@ function MessangerSender() {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    // firebase의 posts 부분에서 데이터 추가
     db.collection("posts").add({
       message: input,
       timestamp: firebase.firestore.FieldValue.serverTimestamp(),
@@ -29,7 +27,6 @@ function MessangerSender() {
       image: imageUrl,
     });
 
-    // some clever db stuff
     setInput("");
     setImageUrl("");
   };

@@ -5,7 +5,6 @@ import MessageSender from "./MessageSender";
 import Post from "./Post";
 import db from "./firebase";
 
-// firebase db에서 data값 가져오는방법
 function Feed() {
   const [posts, setPosts] = useState([]);
 
