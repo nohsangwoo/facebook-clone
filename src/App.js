@@ -16,11 +16,15 @@ function App() {
   return (
     // BEM naming convention
     <div className="App">
+      <div>main</div>
       {!user ? (
         <>
+          test for body
+          <div>test for div</div>
           <div className="login__logo">
-            <img src={fbLogo} alt="fbLogo" />
-            <img src={fbWord} alt="fbWord" />
+            <div>class</div>
+            {/* <img src={fbLogo} alt="fbLogo" />
+            <img src={fbWord} alt="fbWord" /> */}
           </div>
           {/* <h1>Login page this</h1> */}
           {/* <Login /> */}
