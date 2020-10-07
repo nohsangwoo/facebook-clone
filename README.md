@@ -14,4 +14,4 @@
 
 # React flip move
 
-Hosting URL: https://facebook-clone-250c3.web.app
+Hosting URL: https://fb-clone-noh.netlify.app/
