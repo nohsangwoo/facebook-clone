@@ -18,7 +18,6 @@ function App() {
         </>
       ) : (
         <>
-          <h1>Success the login after into facebook feed page this</h1>
           <Header />
           <div className="app__body">
             <Sidebar />

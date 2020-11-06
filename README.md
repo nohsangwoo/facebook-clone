@@ -1,17 +1,15 @@
-# React + React Hooks
+# FaceBook clone
 
-# React context API -> REDUX pattern
+> React + React Hooks 사용법 학습
+> React context API -> REDUX pattern 학습
+> css 프레임워크 MATERIAL UI 학습
+> FLEXBOX 학습
+> Firebase's Firestore realtime DB 연동방법 학습
+> Firebase hosting방법 학습 (다만 여기선 netlify로 배포)
+> Firbase Google Authentication (FULL LOGIN) 방법 학습
+> React flip move
 
-# MATERIAL UI
+### 구현 동작
 
-# FLEXBOX
-
-# Firebase's Firestore realtime DB
-
-# Firebase hosting
-
-# Firbase Google Authentication (FULL LOGIN)
-
-# React flip move
-
-Hosting URL: https://fb-clone-noh.netlify.app/
+![1-login_page](./README_IMAGE/1-login_page.png)
+![2-main_page](./README_IMAGE/2-main_page.png)
